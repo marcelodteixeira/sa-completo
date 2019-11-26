@@ -1,0 +1,171 @@
+form {
+	/* Apenas para centralizar o form na página */
+	margin: 0 auto;
+	width: 400px;
+	/* Para ver as bordas do formulário */
+	padding: 1em;
+	border: 1px solid #fff;
+	border-radius: 1em;
+}
+
+form div+div {
+	margin-top: 1em;
+}
+
+label {
+	/*Para ter certeza que todas as labels tem o mesmo tamanho e estão propriamente alinhadas */
+	display: inline-block;
+	width: 90px;
+	text-align: right;
+}
+
+input, textarea {
+	/* Para certificar-se que todos os campos de texto têm as mesmas configurações de fonte. Por padrão, textareas ter uma fonte monospace*/
+	font: 1em sans-serif;
+	/* Para dar o mesmo tamanho a todos os campo de texto */
+	width: 300px;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	/* Para harmonizar o look & feel das bordas nos campos de texto*/
+	border: 2px solid #fefcfc;
+}
+
+input:focus, textarea:focus {
+	/* Dar um pouco de destaque nos elementos ativos */
+	border-color: #009900;
+}
+
+#h1-estado {
+	text-align: center;
+}
+
+#h2-GrupoMaster {
+	text-align: right;
+}
+
+textarea {
+	/* Para alinhar corretamente os campos de texto de várias linhas com sua label*/
+	vertical-align: top;
+	/* Para dar espaço suficiente para digitar algum texto */
+	height: 5em;
+	/* Para permitir aos usuários redimensionarem qualquer textarea verticalmente. Ele não funciona em todos os browsers */
+	resize: vertical;
+}
+
+button {
+	/* Esta margem extra representa aproximadamente o mesmo espaço que o espaço entre as labels e os seus campos de texto*/
+	margin-left: .5em;
+}
+
+.div-button {
+	/* Para posicionar os botões para a mesma posição dos campos de texto */
+	padding-left: 90px; /* mesmo tamanho que os elementos do tipo label */
+}
+
+/*CSS DO MENU*/
+
+body {
+    margin: 1px;
+    padding: 0px;
+    font-family: "MuseoSans", Arial, sans-serif;
+    background-color:black;
+    color:white;
+}
+
+img {
+    margin: 5px;
+    border: 1px solid #ccc;
+    float: right;
+    width: 180px;
+    font-weight:bold;
+}
+    img:hover {
+        border: 10px solid #777;
+        font-weight: bold;
+    }
+
+.container {
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+h1 {
+    color: White; font-size:30px;
+}
+.center{
+    color:blue; font-size:15px; text-align:center;
+}
+
+p{
+    color:White; font-size:20px;
+}
+
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+    li a, .dropbtn {
+        display: inline-block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: Blue;
+        }
+
+    li.dropdown {
+        display: inline-block;
+    }
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+        .dropdown-content a:hover {
+            background-color: #a8a4a4
+        }
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+input{
+    color:blue; font-size:12px;
+}
+label{
+    color:skyblue; font-size:13px;
+}
+
+
+function CriarPDF() {
+    var minhaTabela = document.getElementById('tabela').innerHTML;
+    var style = "<style>";
+    style = style + "table {width: 100%;font: 20px Calibri;}";
+    style = style + "table, th, td {border: solid 1px #DDD; border-collapse: collapse;";
+    style = style + "padding: 2px 3px;text-align: center;}";
+    style = style + "</style>";
